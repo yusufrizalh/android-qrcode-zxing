@@ -45,6 +45,7 @@ public class CameraActivity extends AppCompatActivity implements ZXingScannerVie
         }
     }
 
+    // add permission
     private boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(getApplicationContext(), GET_ACCOUNTS);
         int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), CAMERA);
@@ -57,6 +58,7 @@ public class CameraActivity extends AppCompatActivity implements ZXingScannerVie
         ActivityCompat.requestPermissions(this, new String[]{WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
     }
 
+    // add permission 
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case PERMISSION_REQUEST_CODE:
